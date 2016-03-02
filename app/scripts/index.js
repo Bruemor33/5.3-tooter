@@ -17,3 +17,13 @@ function hello(){
 }
 
 module.exports = {"hello": hello};
+
+$(function(){
+  var creating = new CreatePost();
+
+  $(document).on('create:post', function(event, input){
+    createThePost.click(input);
+    console.log('I was clicked');
+  });
+
+});

@@ -11,3 +11,15 @@ PostView.prototype.showPosts = function(posts){
 };
 
 global.PostView = PostView;
+
+function CreatePost(){
+  $('body').append('<button class="create-post">Click me</button>');
+}
+
+CreatePost.prototype.createThePost = function(create){
+  window.promt(function(create){
+    $('.create-post').append('<input></input>');
+  })
+}
+
+global.CreatePost = CreatePost;
